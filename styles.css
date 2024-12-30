@@ -94,22 +94,28 @@ nav {
 }
 
 .cta {
-    background-color: #f90;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    margin-top: 20px;
-    border-radius: 5px;
+  background-color: #f90;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
 .cta:hover {
-    background-color: #c60;
+  background-color: #c60;
 }
 
 /* Services Section */
 .services {
-    text-align: center;
-    background: #eaeaea;
+  text-align: center;
+  background: #eaeaea;
+}
+
+.services h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-block: 100px 40px;
 }
 
 /* Container for services grid */
@@ -154,6 +160,7 @@ nav {
 .service-card h3 {
     font-size: 1.2rem;
     color: #333;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
