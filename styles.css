@@ -145,6 +145,14 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    header {
+       background-position: bottom right;
+       padding-inline: 5%;
+    }
+    nav {
+      margin: 20px 0;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
