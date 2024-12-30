@@ -5,4 +5,4 @@ const toggleMenu = () => {
 
 const menu = document.querySelector('.burger');
 
-menu.addEventListener('click', toggleMenu());
+menu.addEventListener('click', toggleMenu);
