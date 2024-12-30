@@ -108,20 +108,62 @@ nav {
 
 /* Services Section */
 .services {
-    padding: 50px;
-    background-color: #f4f4f4;
     text-align: center;
+    background: #eaeaea;
 }
 
-.services ul {
-    list-style: none;
-    padding: 0;
+/* Container for services grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 15%;
+    background-color: rgb(253, 176, 60);
 }
 
-.services li {
-    font-size: 20px;
-    margin: 10px 0;
+/* Service card styling */
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
+
+.service-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Icon styling */
+.service-icon {
+    margin-bottom: 15px;
+}
+
+.service-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* Round the icon */
+    border: 3px solid #ddd;
+    padding: 5px;
+}
+
+/* Title styling */
+.service-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Description styling */
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
 
 /* About Us Section */
 .about {
