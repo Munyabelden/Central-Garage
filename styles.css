@@ -13,11 +13,17 @@
   -o-transition: all 300ms ease-in-out;
 }
 
+:root {
+  --primary-color: rgb(77, 138, 203);
+  --secondary-color: #fda03c;
+  --primary-background: rgba(41, 44, 48, 0.6);
+}
+
 header {
-  background: rgb(79, 72, 63);
-  background-image: url('./images/19717.jpg');
+  background: rgba(63, 70, 79, 0.6);
+  background-image: url('./images/pexels-mikebirdy-4002393.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   height: 100vh;
   width: 100%;
   display: block;
@@ -27,30 +33,31 @@ header {
 }
 
 nav {
-  background-color: #333;
+  background-color: var(--primary-background);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  margin: 20px 15%;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
+  margin-top: 20px;
+  margin-inline: 15%;
+  border-radius: 50px 50px 0 0;
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  -ms-border-radius: 50px 50px 0 0;
+  -o-border-radius: 50px 50px 0 0;
   display: flex;
   align-items: center;
 }
 
 .logo h1 {
   margin: 0;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 800;
 }
 
 .logo h1 span {
-  color: rgb(255, 178, 62);
+  color: var(--primary-color);
 }
 
 .nav-links {
@@ -87,7 +94,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 170px;
+  padding-top: 100px;
+  background: var(--primary-background);
+  margin-inline: 15%;
+  height: 80vh;
 }
 
 .hero h2 {  
@@ -95,17 +105,21 @@ nav {
   font-weight: 800;
 }
 
+.hero h2 strong {
+  color: rgb(119, 176, 236);
+}
+
 .cta {
-  background-color: #f90;
+  background-color: var(--primary-color);
   padding: 10px 20px;
   color: white;
   text-decoration: none;
-  margin-top: 20px;
+  margin-top: 160px;
   border-radius: 5px;
 }
 
 .cta:hover {
-  background-color: #c60;
+  background-color: var(--secondary-color);
 }
 
 /* Services Section */
@@ -122,11 +136,14 @@ nav {
 
 /* Container for services grid */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 50px 15%;
-    background-color: rgb(253, 176, 60);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 50px 15%;
+  background-color: rgb(50, 64, 78);
+  /* background-image: url('./images/16091.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; */
 }
 
 /* Service card styling */
@@ -134,7 +151,7 @@ nav {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
@@ -176,22 +193,94 @@ nav {
 
 /* About Us Section */
 .about {
-    padding: 50px;
-    text-align: center;
-    background-color: #eaeaea;
+  padding: 100px 15%;
+  text-align: center;
+  background-color: #d8dede;
+}
+
+.about h2 {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(84, 115, 151);
+}
+
+.about h2::after {
+    content: "";
+    position: absolute;
+    z-index: -1; 
+    left: 0;
+    right: 0;
+    bottom: -3px; 
+    height: 30px; 
+    background-color: #041225; 
+    transform: skewX(-10deg); 
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
 }
 
 .contact {
-    padding: 50px;
-    background-color: #f4f4f4;
-    text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
 }
+
+/* Responsive Design for Tablet (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .about,
+    .services-grid {
+        padding-inline: 10%;
+    }
+
+    .hero {
+        margin-inline: 10%;
+    }
+}
+
+/* Responsive Design for Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .about,
+    .services-grid {
+        padding-inline: 5%;
+    }
+
+    .hero {
+        margin-inline: 5%;
+    }
+}
+
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+.whatsapp_float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.whatsapp-icon {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 /* Responsive Design */
@@ -201,7 +290,8 @@ footer {
        padding-inline: 5%;
     }
     nav {
-      margin: 20px 0;
+      margin-top: 20px;
+      margin-inline: 5%;
     }
 
     .nav-links {
@@ -224,6 +314,7 @@ footer {
         -moz-transition: all 300ms ease-in-out;
         -ms-transition: all 300ms ease-in-out;
         -o-transition: all 300ms ease-in-out;
+        z-index: 1000;
 }
 
     .burger {
