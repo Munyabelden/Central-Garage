@@ -132,6 +132,7 @@ nav {
   font-size: 3rem;
   font-weight: 800;
   padding-block: 100px 40px;
+  color: rgb(28, 34, 41);
 }
 
 /* Container for services grid */
@@ -150,7 +151,6 @@ nav {
 .service-card {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
