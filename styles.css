@@ -283,6 +283,14 @@ footer {
   height: 40px;
 }
 
+.map {
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     header {
